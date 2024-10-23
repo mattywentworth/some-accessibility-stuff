@@ -1,0 +1,6 @@
+.navlinksContainer {
+    display: flex;
+    font-weight: 500;
+    color: var(--dark-font-color-main);
+    font-size: 1rem;
+}

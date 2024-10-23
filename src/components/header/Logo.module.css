@@ -1,0 +1,36 @@
+.logo {
+    font-family: monospace, sans-serif;
+    font-size: 1.5rem;
+    color: var(--dark-font-color-main);
+    font-weight: 700;
+    display: flex;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.stripes div {
+    height: 0.8rem;
+    width: 20rem;
+    transform: rotate(45deg);
+    margin-left: -3rem;
+}
+
+.red {
+    background-color: #C37681;
+}
+
+.yellow {
+    background-color: #EAE086;
+}
+
+.white {
+    background-color: #EAEBEC;
+}
+
+.blue {
+    background-color: #89C1Df;
+}
+
+.green {
+    background-color: #5BAC82;
+}

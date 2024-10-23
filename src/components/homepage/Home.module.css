@@ -1,0 +1,114 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 2rem 2rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.mainText {
+    width: 45%;
+    padding: 0 1rem;
+}
+
+.mainText h1 {
+    font-weight: 600;
+}
+
+.mainText h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.hero {
+    /*width: 40%;*/
+    height: 25rem;
+    border-radius: 10px;
+    margin: 1rem;
+}
+
+.factoid {
+    background-color: #5BAC82;
+    padding: 1rem 3rem 0.5rem;
+    display: flex;
+
+}
+
+.factoid h2 {
+    margin: 0;
+    padding: 1rem 1rem 0.5rem;
+}
+
+.factoid p {
+    padding: 0.5rem 1rem 2rem;
+    font-size: 1.5rem;
+    width: 70%
+}
+
+.factoid img {
+    width: 20rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+}
+
+.targets {
+    margin: 2rem 4rem;
+    text-align: center;
+}
+
+.targets h2 {
+    padding: 1rem 1rem 2rem;
+}
+
+.logos {
+    display: flex;
+    justify-content: space-around;
+}
+
+.targets img {
+    height: 4rem;
+}
+
+.reddit {
+    /*margin: -1rem;*/
+    height: 8rem; /* figure out how to edit this well */
+}
+
+.purpose {
+    width: 100%;
+    margin: 3rem 0rem;
+    padding: 1rem 4rem;
+    background-color: #89C1DF;
+}
+
+.featuresHeading {
+    text-align: center;
+    padding: 0.5rem 1rem 1.5rem;
+}
+
+.featuresHeading span {
+    border-bottom: 3px solid black; /* Is underlining an accessible way to format the text, since it's technically not underlined? */
+}
+
+.features {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /*width: 100%;*/
+    margin: 2rem 0;
+    box-sizing: border-box;
+}
+
+.features div {
+    width: 25%;
+    text-align: center;
+}
+
+.features p {
+    padding-top: 1rem;
+}
+
+.irony {
+    padding: 0rem 4rem;
+    text-align: center;
+}

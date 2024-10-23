@@ -1,0 +1,7 @@
+footer {
+    min-height: 8vh;
+    background-color: var(--dark-background-color-secondary);
+    color: var(--dark-font-color-main);
+    padding: 3rem;
+    text-align: center;
+}

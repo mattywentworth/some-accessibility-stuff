@@ -1,0 +1,24 @@
+div {
+    display: block;
+}
+
+.submitButton {
+    
+    margin: 2rem 0;
+    padding: 1rem;
+    width: 12rem;
+    background-color: black;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-size: 1.25rem;
+}
+
+.submitButton:hover {
+    background-color: olive;
+    border: 2px solid olive;
+}
+
+.submitButton:active {
+    background-color: green;
+    border: 2px solid green;
+}

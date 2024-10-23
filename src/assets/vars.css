@@ -1,0 +1,15 @@
+/*
+Source for much of the color scheme theory here:
+https://m2.material.io/design/color/dark-theme.html#properties
+*/
+
+:root {
+    --dark-background-color-main: #121212;
+    --dark-background-color-secondary: #1F1F1F;
+    --dark-background-color-tertiary: #2D2D2D;
+    --dark-background-color-tertiary-hover: #363636;
+    --dark-font-color-main: #E1E1E1;
+    --dark-font-color-secondary: #A6A6A6;
+    --dark-overall-color-primary: #00DAC5;
+
+}
