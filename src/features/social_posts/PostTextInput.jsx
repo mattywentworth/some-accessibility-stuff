@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './PostTextInput.module.css';
 import { updatePostText, selectSocialPostText } from './socialPostTextSlice';
 import { useSelector, useDispatch } from 'react-redux'; //?
+import { checkConsecutiveEmojis, checkEmojiPlacementInSentences } from './emojisSlice';
 
 
 export const PostTextInput = () => {
@@ -10,7 +11,10 @@ export const PostTextInput = () => {
     const socialPostText = useSelector(selectSocialPostText);
     //const [postText, setPostText] = useState('');
     const handleChange = (e) => {
-        dispatch(updatePostText(e.target.value));
+        const postTextValue = e.target.value;
+        dispatch(updatePostText(postTextValue));
+        dispatch(checkConsecutiveEmojis(postTextValue));
+        dispatch(checkEmojiPlacementInSentences(postTextValue));
     }
 
     const regExpEmoji = /(\p{Emoji_Presentation}|\p{Extended_Pictographic})/gu;

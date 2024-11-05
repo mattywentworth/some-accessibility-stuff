@@ -1,0 +1,23 @@
+.containerHidden {
+    display: none;
+}
+
+.containerVisible {
+    display: block;
+}
+
+.consecutiveEmojisHidden {
+    display: none;
+}
+
+.consecutiveEmojisVisible {
+    display: block;
+}
+
+.emojisWithinASentenceHidden {
+    display: none;
+}
+
+.emojisWithinASentenceVisible {
+    display: block;
+}

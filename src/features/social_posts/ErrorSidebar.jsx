@@ -1,7 +1,11 @@
 import React from 'react';
 import styles from './ErrorSidebar.module.css';
+import { EmojiConcerns } from './EmojiConcerns';
 
 export const ErrorSidebar = () => {
+
+    //const 
+    
 
     return (
         <div className={styles.container}>
@@ -10,6 +14,9 @@ export const ErrorSidebar = () => {
             <p>If your post contains hashtags made up of multiple words, please capitalize each word within the hashtag. 
                 For example, <strong>#CareerAdvice</strong> instead of <strong>#careeradvice</strong>.
             </p>
+            <div>
+                <EmojiConcerns />
+            </div>
         </div>
     )
 }

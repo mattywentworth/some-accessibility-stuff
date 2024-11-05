@@ -1,14 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const emojiSlice = createSlice({
+const emojisSlice = createSlice({
     name: 'emojis',
     initialState: {
+        //test: ['test', 'test'],
         consecutiveEmojis: false,
-        emojiIsWithinASentence: false
+        emojisWithinASentence: false
     },
     reducers: {
         checkConsecutiveEmojis: (state, action) => {
             const postString = action.payload;
+            //alert(postString);
             const arrayOfStringChars = [...postString];
             //const arrayFilteredForEmojis = arrayOfStringChars.filter()
             const arrayOfEmojisAndIndices = [];
@@ -30,7 +32,13 @@ const emojiSlice = createSlice({
                     return emojiObj.index + 1 === arrayOfEmojisAndIndices[i + 1].index;
                 }
             });
-            isThereAStringOfEmojis ? state.consecutiveEmojis = true : state.consecutiveEmojis = false;
+            if (isThereAStringOfEmojis) {
+                state.consecutiveEmojis = true;
+            } else {
+                state.consecutiveEmojis = false;
+            }
+            //return isThereAStringOfEmojis ? state.consecutiveEmojis = true : state.consecutiveEmojis = false;
+            //return state.consecutiveEmojis;
         },
         checkEmojiPlacementInSentences: (state, action) => {
             const postString = action.payload;
@@ -53,21 +61,26 @@ const emojiSlice = createSlice({
                     }
                 }
                 if (arrayOfTruthys.length >= 1) {
-                    return true;
+                    return state.emojisWithinASentence = true;
+                } else {
+                    return state.emojisWithinASentence = false;
                 }
             });
-            emojiIsWithinASentence ? state.emojiIsWithinASentence === true : state.emojiIsWithinASentence === false;
+            //return emojiIsWithinASentence ? state.emojisWithinASentence = true : state.emojisWithinASentence = false;
+            //return state.emojisWithinASentence;
         }
     }
-})
+});
 
-export const selectConsecutiveEmojis = (state) => state.emojis.consecutiveEmojis;
+export const selectConsecutiveEmojis = (state) => {
+    return state.emojis.consecutiveEmojis;
+};
 
-export const selectEmojiIsWithinASentence = (state) => state.emojis.emojiIsWithinASentence;
+export const selectEmojisWithinASentence = (state) => state.emojis.emojisWithinASentence;
 
-export const { checkConsecutiveEmojis, checkEmojiPlacementInSentences } = emojiSlice.actions;
+export const { checkConsecutiveEmojis, checkEmojiPlacementInSentences } = emojisSlice.actions;
 
-export default emojiSlice.reducer;
+export default emojisSlice.reducer;
 
 
 //message: 'Emojis are a useful communication tool. But using multiple emojis in a row can make it difficult for people with low vision to understand the content of your post. Please consider reducing your use of emojis in order to make your post more accessible for all of our users.\n\n https://www.youtube.com/watch?v=0XJBIUH_o4w'
