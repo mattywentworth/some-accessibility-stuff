@@ -1,4 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { selectSocialPostText } from './socialPostTextSlice';
+import { useSelector } from 'react-redux';
+
+//Edge cases that aren't functioning properly
+//Using emojis such as 👯‍♀️ which are technically comprised of multiple emojis? This triggers both the multiple emojis rule
+//and the emojis within sentences rule, even when it's at the very end.
+//4 sunglasses emojis in a row is treated as a sentence, and when i delete it down to 2 sunglasses emojis, the
+//emojisWithinSentences rule is set to false.
+
+//const socialPostText = useSelector(selectSocialPostText);
 
 const emojisSlice = createSlice({
     name: 'emojis',
@@ -51,6 +61,7 @@ const emojisSlice = createSlice({
                 const emojiExists = arrayOfSentenceChars.some(char => {
                     return char.codePointAt(0) > 255 && char.codePointAt(0) !== undefined;
                 });
+                //I think I need to move arrayOfTruthys one level up in the code so that it is accessible in the containing function. Then need to check for emojiIsWithinASentence before running through the other logic in this function
                 const arrayOfTruthys = [];//Should improve the code below by checking if the end of the sentence is a string of emojis,
                 //in which case it would already be caught by the other dispatched action.
                 if (emojiExists === true) {
@@ -62,6 +73,10 @@ const emojisSlice = createSlice({
                 }
                 if (arrayOfTruthys.length >= 1) {
                     return state.emojisWithinASentence = true;
+                } else if (arrayOfTruthys.length === 0/* || action.payload === ''*/) {
+                    return state.emojisWithinASentence = false;
+                } else if (selectSocialPostText(state) === '') {
+                    return state.emojisWithinASentence = false;
                 } else {
                     return state.emojisWithinASentence = false;
                 }

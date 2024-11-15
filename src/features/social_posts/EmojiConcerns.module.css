@@ -4,6 +4,8 @@
 
 .containerVisible {
     display: block;
+    height: 60vh;
+    overflow: scroll;
 }
 
 .consecutiveEmojisHidden {
@@ -11,6 +13,22 @@
 }
 
 .consecutiveEmojisVisible {
+    display: block;
+}
+
+.consecutiveInfoContainerHidden {
+    display: none;
+}
+
+.consecutiveInfoContainerVisible {
+    display: block;
+}
+
+.withinSentenceInfoContainerHidden {
+    display: none;
+}
+
+.withinSentenceInfoContainerVisible {
     display: block;
 }
 

@@ -1,6 +1,9 @@
 .container {
     box-sizing: border-box;
-    margin: 0 3rem;
+    margin-left: var(--margin-primary-container);
+    margin-right: var(--margin-primary-container);
+    margin-top: var(--margin-secondary-container);
+    margin-bottom: var(--margin-secondary-container);
     /*width: 100%;*/
 }
 

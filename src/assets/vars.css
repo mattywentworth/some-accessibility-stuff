@@ -11,5 +11,8 @@ https://m2.material.io/design/color/dark-theme.html#properties
     --dark-font-color-main: #E1E1E1;
     --dark-font-color-secondary: #A6A6A6;
     --dark-overall-color-primary: #00DAC5;
+    --margin-primary-container: 3rem;
+    --margin-secondary-container: 1rem;
+    --padding-secondary-container: 1rem;
 
 }

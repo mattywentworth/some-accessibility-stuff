@@ -1,0 +1,19 @@
+.container {
+    padding-left: var(--padding-secondary-container);
+    padding-right: var(--padding-secondary-container);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid black;
+}
+
+.autoTypeContainer {
+    display: flex;
+}
+
+.textGeneratorButton {
+    border-radius: 20px;
+    background-color: green;
+    padding: 0.25rem 0.5rem;
+    border: 2px solid green;
+    margin-left: 0.5rem;
+}
