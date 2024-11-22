@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin-left: var(--margin-primary-container);
     margin-right: var(--margin-primary-container);
-    margin-top: var(--margin-secondary-container);
     margin-bottom: var(--margin-secondary-container);
     /*width: 100%;*/
 }
@@ -10,6 +9,9 @@
 .subContainer {
     box-sizing: border-box;
     display: flex;
+    padding-top: 2rem;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     /*width: 100%;*/
 }
 

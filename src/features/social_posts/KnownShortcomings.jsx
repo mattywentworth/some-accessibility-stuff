@@ -6,6 +6,18 @@ export const KnownShortcomings = () => {
     const splitText = [...textToSplit];
 
 
+    /*Should I come up with a way to type these up separately so that it can be mapped over and populated in the recycled element?
+    const testText = [
+        {text: 
+            <div>
+                <p>This is a test.</p>
+                <h5>Does this work?</h5>
+                <p>More of a test.</p>
+            </div>
+        }
+    ]
+    */
+
     return (
         <div>
             <h3>Known Shortcomings</h3>

@@ -34,7 +34,7 @@ export const DemoDirections = () => {
         <div className={styles.container}>
             <h1>Interactive Demo: Handling Inaccessible Emoji Use In Social Posts</h1>
             <div>
-                <p>This demo shows functionality that social media platforms could implement to encourage users to create more accessible posts. To use the demo, type in the text box below as if you were writing a post for one of your social media accounts. Make sure your message contains at least 2 consecutive emojis and at least one emoji in the middle of a sentence.</p>
+                <p>This demo shows functionality that social media platforms could implement to encourage users to create more accessible posts. There is a text box below with the placeholder text, "What's on your mind?" To use the demo, type in the text box as if you were writing a post for one of your social media accounts. Make sure your message contains at least 2 consecutive emojis and at least one emoji in the middle of a sentence.</p>
                 <br></br>
                 <div className={styles.autoTypeContainer}>
                     <p>Alternatively, you can let me type a message for you:</p>

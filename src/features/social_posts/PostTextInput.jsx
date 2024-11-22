@@ -17,6 +17,7 @@ export const PostTextInput = () => {
             dispatch(checkEmojiPlacementInSentences(''));
         }
         dispatch(updatePostText(postTextValue));
+        //alert(socialPostText); ... This alert appears before socialPostText has been updated, so I'm using the following dispatched functions on postTextValue.
         dispatch(checkConsecutiveEmojis(postTextValue));//Are this and the following line a violation of state guidelines? When I dispatch "socialPostText", the desired effect doesn't happen.
         dispatch(checkEmojiPlacementInSentences(postTextValue));   
     }
@@ -215,29 +216,6 @@ export const PostTextInput = () => {
     return (
         <>
             <textarea id='text-input-emoji-post' value={socialPostText} onChange={handleChange} className={styles.input} placeholder='What&#39;s on your mind?'></textarea>
-            {/*<p>{string.codePointAt(0)}+{string.codePointAt(1)}+{string.codePointAt(2)}+{string.codePointAt(3)}</p>
-            <p>{test}</p>
-            <p>{array}</p>
-            <p>{firstEmoji}</p>
-            <p>{testOne}</p>
-            <p>{firstEmoji.codePointAt(0)}</p>
-            <p>{translateOne}{translateTwo}</p>
-            <p>{secondEmoji}</p>
-            <p>{testTwo}</p> {/* This is failing the test, but if you convert it to its codepoint (next line) first, it registers as the approopriate code. Sp regex meeds to be on the converted code? */}
-            {/*<p>{secondEmoji.codePointAt(0)}</p>
-            <p>{String.fromCodePoint(secondEmoji.codePointAt(0))}</p>
-            <p>{thirdEmoji}</p>
-            <p>{testThree}</p>
-            <p>{thirdEmoji.codePointAt(0)}</p>
-            <p>{String.fromCodePoint(thirdEmoji.codePointAt(0))}</p>
-            <p>{firstLetter}</p>
-            <p>{testFour}</p>
-            <p>{firstLetter.codePointAt(0)}</p>
-            <p>{arrayTwo.map(charAtIndex => {
-                return charAtIndex;
-            })}</p>
-            <p>{arrayTwo[0]}{arrayTwo[1]}</p>
-            <p>{testString}</p>*/}
         </>
     )
 }

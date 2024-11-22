@@ -7,6 +7,8 @@ import { Root } from './components/Root';
 import { Home } from './components/homepage/Home';
 import { SocialPostContainer } from './features/SocialPostContainer';
 import { DraftPostContainer } from './features/social_posts/DraftPostContainer';
+import { SocialPostHashtagsContainer } from './features/social_posts_hashtags/SocialPostHashtagsContainer';
+import { DraftPostHashtagsContainer } from './features/social_posts_hashtags/DraftPostHashtagsContainer';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,9 +16,11 @@ function App() {
   const router = createBrowserRouter(createRoutesFromElements(
     <Route path='/' element={<Root/>}>
       <Route index element={<Home />} />
-      <Route path='social-post-text' element={<SocialPostContainer />} />
-      <Route path='social-post-text/demo' element={ <DraftPostContainer /> } />
+      <Route path='social-post-emojis' element={<SocialPostContainer />} />
+      <Route path='social-post-emojis/demo' element={ <DraftPostContainer /> } />
       {/*<Route path='demo' element={ <DraftPostContainer /> } />*/}
+      <Route path='social-post-hashtags' element={<SocialPostHashtagsContainer />}/>
+      <Route path='social-post-hashtags/demo' element={<DraftPostHashtagsContainer />} />
     </Route>
   ))
 

@@ -1,17 +1,17 @@
 import React from 'react';
-import styles from './ErrorSidebar.module.css';
-import { EmojiConcerns } from './EmojiConcerns';
-import { HashtagConcerns } from '../social_posts_hashtags/HashtagConcerns';
-import { selectEmojisWithinASentence, selectConsecutiveEmojis } from './emojisSlice';
+import styles from '../social_posts/ErrorSidebar.module.css';
 import { useSelector } from 'react-redux';
+import { selectLowercaseHashtags } from './lowercaseHashtagsSlice';
+import { HashtagConcerns } from './HashtagConcerns';
 
-export const ErrorSidebar = () => {
+export const ErrorSidebarHashtags = () => {
 
-    const emojisWithinASentence = useSelector(selectEmojisWithinASentence);
-    const consecutiveEmojis = useSelector(selectConsecutiveEmojis);
+    const filteredHashtags = useSelector(selectLowercaseHashtags);
+    /*const emojisWithinASentence = useSelector(selectEmojisWithinASentence);
+    const consecutiveEmojis = useSelector(selectConsecutiveEmojis);*/
 
     let violationMessage;
-    if (emojisWithinASentence || consecutiveEmojis) {
+    if (filteredHashtags.length > 0) {
         violationMessage = <p>Please Address The Following Accessibility Concerns:</p>
     } else {
         violationMessage = <p>If we detect possible accessibility issues with the content of your post, we will display them below.</p>
@@ -32,7 +32,7 @@ export const ErrorSidebar = () => {
             </div>
             <div>
                 <HashtagConcerns />
-                <EmojiConcerns />
+                {/*<EmojiConcerns />*/}
             </div>
         </div>
     )
